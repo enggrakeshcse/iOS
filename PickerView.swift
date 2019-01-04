@@ -20,7 +20,11 @@ extension ViewController : UIPickerViewDataSource, UIPickerViewDelegate {
         return 0
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+   
+    
+    //MARK:- PickerView Delegates Used
+
+     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             return country[row]
         }
@@ -34,8 +38,6 @@ extension ViewController : UIPickerViewDataSource, UIPickerViewDelegate {
         return ""
     }
     
-    //MARK:- PickerView Delegates Used
-
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // pickerView.reloadComponent(1)
         if component == 0 {
